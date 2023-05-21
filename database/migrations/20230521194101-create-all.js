@@ -1,7 +1,7 @@
 'use strict';
 
 const {FAULT_TABLE, FaultSchema} = require('../models/fault.model')
-const {TYPE_TABLE, TypesSchema} = require('../models/types.model');
+const {TYPE_TABLE, TypesSchema} = require('../models/type.model');
 
 module.exports = {
   async up(queryInterface) {
