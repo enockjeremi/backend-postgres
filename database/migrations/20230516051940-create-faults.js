@@ -1,13 +1,14 @@
+
 'use strict';
 
-const {FAULT_TABLE, FaultSchema} = require('../models/fault.model')
+const {TYPE_TABLE, TypesSchema} = require('../models/types.model');
 
 module.exports = {
   async up (queryInterface) {
-    await queryInterface.createTable(FAULT_TABLE, FaultSchema)
+    await queryInterface.createTable(TYPE_TABLE, TypesSchema)
   },
 
   async down (queryInterface) {
-    await queryInterface.dropTable(FAULT_TABLE, FaultSchema)
+    await queryInterface.dropTable(TYPE_TABLE)
   }
 };
