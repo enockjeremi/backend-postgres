@@ -1,4 +1,3 @@
-
 'use strict';
 
 const {TYPE_TABLE, TypesSchema} = require('../models/types.model');
