@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres
+    container_name: db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: enock
+      POSTGRES_PASSWORD: marines
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=jeremi.enock.95@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=marines
+
+    ports:
+      - 5050:80
